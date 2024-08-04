@@ -19,7 +19,7 @@ modules:
       buildpack: nodejs_buildpack
       readiness-health-check-type: http
       readiness-health-check-http-endpoint: /health
-      disk-quota: 128M
+      disk-quota: 256M
       memory: 96M
     build-parameters:
       builder: npm

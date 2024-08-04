@@ -14,3 +14,6 @@
 ###  call function
 GET {{server}}/odata/v4/catalog/GenerateFilter(Text='Produto Teste',Entity='_ProductDescription',Field='ProductDescription')
 
+
+### CALL FUNCTION DIRECT
+GET http://sap-presales-brazil---btp-sap-presales-br-usa-dev-capge4257677d.cfapps.us10.hana.ondemand.com/odata/v4/catalog/GenerateFilter(Text='Produto Teste',Entity='_ProductDescription',Field='ProductDescription')

@@ -16,8 +16,8 @@
     "eslint": "^9"
   },
   "cds": {
-    "auth": {
-      "dummy": true
+    "requires": {
+      "auth": "dummy-auth"
     }
   },
   "scripts": {
