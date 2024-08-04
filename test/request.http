@@ -1,0 +1,16 @@
+@server = http://localhost:46543
+@me = Authorization: Basic {{$processEnv USER}}:
+@basic = Authorization: Basic admin:admin
+
+
+### ------------------------------------------------------------------------
+### ------------------------------------------------------------------------
+### -------------------------------CATALOG----------------------------------
+### ------------------------------------------------------------------------
+### ------------------------------------------------------------------------
+
+
+
+###  call function
+GET {{server}}/odata/v4/catalog/GenerateFilter(Text='Produto Teste',Entity='_ProductDescription',Field='ProductDescription')
+
