@@ -1,4 +1,4 @@
-@server = http://localhost:46543
+@server = http://localhost:36649
 @me = Authorization: Basic {{$processEnv USER}}:
 @basic = Authorization: Basic admin:admin
 
@@ -17,3 +17,27 @@ GET {{server}}/odata/v4/catalog/GenerateFilter(Text='Produto Teste',Entity='_Pro
 
 ### CALL FUNCTION DIRECT
 GET http://sap-presales-brazil---btp-sap-presales-br-usa-dev-capge4257677d.cfapps.us10.hana.ondemand.com/odata/v4/catalog/GenerateFilter(Text='Produto Teste',Entity='_ProductDescription',Field='ProductDescription')
+
+
+
+### CALL Action DIRECT
+POST https://sap-presales-brazil---btp-sap-presales-br-usa-dev-capge4257677d.cfapps.us10.hana.ondemand.com/odata/v4/catalog/GenerateFilterAction
+Content-Type: application/json
+
+{
+    "Text": "Produto Teste",
+    "Entity": "_ProductDescription",
+    "Field": "ProductDescription"
+}
+
+
+
+### CALL Action DIRECT
+POST {{server}}/odata/v4/catalog/GenerateFilterAction
+Content-Type: application/json
+
+{
+    "Text": "Produto Teste",
+    "Entity": "_ProductDescription",
+    "Field": "ProductDescription"
+}
