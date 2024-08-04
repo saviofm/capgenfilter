@@ -14,7 +14,9 @@ module.exports = (srv) => {
         const mainFilter = `${Entity}/any(d: d/Language eq 'PT' and (${filters}))`;
 
         // Construir a URL
-        return encodeURIComponent(mainFilter);
+        return mainFilter;
+
+        //return encodeURIComponent(mainFilter);
 
     });
 
@@ -31,7 +33,7 @@ module.exports = (srv) => {
         const mainFilter = `${Entity}/any(d: d/Language eq 'PT' and (${filters}))`;
 
         // Construir a URL
-        return encodeURIComponent(mainFilter);
+        return mainFilter;
 
     });
 };
