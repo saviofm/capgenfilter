@@ -36,4 +36,21 @@ module.exports = (srv) => {
         return mainFilter;
 
     });
+
+
+    srv.on('GenerateFilterActionV2', async (req) => {
+        const { KeyName, KeyValue, FieldName, FieldValue} = req.data;
+
+     
+        // Dividir o texto em palavras
+        const palavras = FieldValue.split(" ");
+
+        // Construir os filtros de pesquisa
+        const filters = palavras.map(palavra => `substringof('${palavra}', ${FieldName})`).join(' or ');
+        return `(${filters}) and ${KeyName} ne '${KeyValue}'`;
+
+
+    });
+    
 };
+

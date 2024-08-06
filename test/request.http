@@ -1,4 +1,4 @@
-@server = http://localhost:36649
+@server = http://localhost:4004
 @me = Authorization: Basic {{$processEnv USER}}:
 @basic = Authorization: Basic admin:admin
 
@@ -40,4 +40,16 @@ Content-Type: application/json
     "Text": "Produto Teste",
     "Entity": "_ProductDescription",
     "Field": "ProductDescription"
+}
+
+
+### CALL Action v2 DIRECT
+POST {{server}}/odata/v4/catalog/GenerateFilterActionV2
+Content-Type: application/json
+
+{
+    "KeyName": "Product",
+    "KeyValue": "84", 
+    "FieldName": "ProductDescription", 
+    "FieldValue": "Produto Teste"
 }
